@@ -17,7 +17,7 @@
     <a href="#"><button class="btn button-5">Button 5</button></a>
     <a href="#"><button class="btn button-6">Button 6</button></a>
     <a href="#"><button class="btn button-7">Button 7</button></a>
-    <a href="#"><button class="btn button-8 transition">Button 7</button></a>
+    <a href="#"><button class="btn button-8">Button 8</button></a>
     </div>
     <div class="code-example">
       <h2>HTML Code:</h2>
@@ -30,13 +30,14 @@
           &lt;a href="#"&gt;&lt;button class="btn button-5"&gt;Button 5&lt;/button&gt;&lt;/a&gt;<br>
           &lt;a href="#"&gt;&lt;button class="btn button-6"&gt;Button 6&lt;/button&gt;&lt;/a&gt;<br>
           &lt;a href="#"&gt;&lt;button class="btn button-7"&gt;Button 7&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-8 transition"&gt;Button 7&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-8"&gt;Button 8&lt;/button&gt;&lt;/a&gt;<br>
          </span>
         </code>
 
         <h2>CSS Code:</h2>
         <code>
-          <pre><span readonly class="textarea code-example__css" role="textbox" id="code-css" contenteditable>.btn {
+          <pre><textarea readonly class="textarea code-example__css" role="textbox" id="code-css" contenteditable>/* Copy that rule is required if you want to use any of presented button */
+.btn {
   min-width: 150px;
   min-height: 50px;
   cursor: pointer;
@@ -53,8 +54,13 @@
   position: relative;
 }
 
+.button-1:hover {
+  background-color: hsl(0, 73%, 42%);
+  box-shadow: 0 5px 15px 5px #cdcdcd;
+}
 
-/* Button 1 fire. If you want to remove it - just simply delete rule down below */
+
+/* Button 1 "fire" easter egg. If you want to remove it - just simply delete rules down below */
 .button-1:active::before {
    display: block;
 }
@@ -68,18 +74,13 @@
 
   width: 270px;
   height: 240px;
-  background-image: url(img/fire.gif);
+  background-image: url(https://gerwld.github.io/great-pure-buttons/img/fire.gif);
   background-repeat: no-repeat;
   filter: hue-rotate(120deg);
   z-index: -1;
 }
 /* End of fire rules */
 
-
-.button-1:hover {
-  background-color: hsl(0, 73%, 42%);
-  box-shadow: 0 10px 20px 0 #cdcdcd;
-}
 
 .button-2 {
   background-color: transparent;
@@ -129,16 +130,16 @@
 }
 
 .button-5 {
-  background-color: #673ab7;
+  background: linear-gradient( 100deg,  rgba(116,18,203,1) 11.2%, rgba(230,46,131,1) 91.2% );
   color: #fff;
-  border: 1px solid #673ab7;
+  border: none;
   border-radius: 100px;
+  background-size: 200px 200px;
 }
 
 .button-5:hover {
-  color: #673ab7;
-  background-color: transparent;
-  border: 1px solid #673ab7;
+  filter: brightness(1.2);
+  background-position: -50px;
 }
 
 .button-6 {
@@ -147,7 +148,6 @@
   border: none;
   border-radius: 0;
 }
-
 
 .button-6:hover {
   box-shadow: 6px 6px 0 0 #9e9e9e;
@@ -189,9 +189,8 @@
 .button-9:hover {
   color: #673ab7;
   background-color: transparent;
-  border: 1px solid #673ab7;
 }
-           </span>
+           </textarea>
            </pre>
           </code>
     </div>
