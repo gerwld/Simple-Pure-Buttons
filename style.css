@@ -87,6 +87,7 @@ display: block;
   border-radius: 5px;
   box-shadow: 0 5px 10px 0 #cdcdcd;
   position: relative;
+  -webkit-user-select:none;
 }
 /* Button 1 fire. If you want to remove it - just simply delete rule down below */
 .button-1:active::before {
