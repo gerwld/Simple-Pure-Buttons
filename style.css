@@ -5,21 +5,63 @@ body {
 }
 
 body {
+  min-width: 610px;
   font-family: "Monserrat", sans-serif;
   font-size: 16px;
 
   background-color: #e3e3e3;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .main-content {
   margin: 0 auto;
-  margin-top: calc(50vh - 120px);
+  margin-top: 200px;
   padding: 0 30px;
-  width: 530px;
+  width: 550px;
 
   display: grid;
   grid-template-columns: repeat(3, 150px);
-  gap: 40px;
+  gap: 50px;
+}
+
+.code-example {
+  min-width: 550px;
+  max-width: 725px;
+  margin: 0 auto;
+}
+
+.code-example h2 {
+  margin-top: 100px;
+}
+
+.textarea {
+display: block;
+ width: 100%;
+ box-sizing: border-box;
+ max-width: 800px;
+ min-width: 530px;
+ overflow: scroll;
+ resize: both;
+ min-height: 40px;
+ line-height: 22px;
+ background-color: #fff;
+ font-family: monospace;
+ padding: 20px;
+ border-radius: 10px;
+}
+
+.code-example__css {
+  height: 600px;
 }
 
 .btn {
@@ -36,7 +78,29 @@ body {
   border: none;
   border-radius: 5px;
   box-shadow: 0 5px 10px 0 #cdcdcd;
+  position: relative;
 }
+/* Button 1 fire. If you want to remove it - just simply delete rule down below */
+.button-1:active::before {
+   display: block;
+}
+
+.button-1::before {
+  content: " ";
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+
+  width: 270px;
+  height: 240px;
+  background-image: url(img/fire.gif);
+  background-repeat: no-repeat;
+  filter: hue-rotate(120deg);
+  z-index: -1;
+}
+
+/* End of fire rules */
 
 .button-1:hover {
   background-color: hsl(0, 73%, 42%);
@@ -58,6 +122,7 @@ body {
   background-color: transparent;
   color: #373737;
   border: 1px solid #373737;
+  transition: background 200ms;
 }
 
 .button-3:hover {
@@ -65,8 +130,17 @@ body {
   background-color: #373737;
 }
 
-.button-3:focus {
-  background-color: hsl(0deg 0% 0% / 6%);
+.button-3:active {
+  transform: skewX(-15deg);
+}
+
+.button-3 span {
+  transition: 0;
+}
+
+.button-3:active span {
+  display: inline-block;
+  transform: skewX(15deg);
 }
 
 .button-4 {
@@ -107,11 +181,58 @@ body {
 
 .button-7 {
   color: #fff;
-  background-color: #9e9e9e;
+  background-image: linear-gradient(to right, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
   border: none;
   border-radius: 5px;
 }
 
 .button-7:hover {
   border-radius: 25px;
+}
+
+.button-8 {
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  background: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
+  background-size: 1px 200px;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+}
+
+.button-8:hover {
+  background-position: 100px;
+
+}
+
+.button-9 {
+  background-color: #673ab7;
+  color: #fff;
+  border: 1px solid #673ab7;
+  border-radius: 100px;
+}
+
+.button-9:hover {
+  color: #673ab7;
+  background-color: transparent;
+  border: 1px solid #673ab7;
+}
+
+.main-footer {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.copyright {
+  color: #adadad;
+}
+
+.copyright a {
+  color: #adadad;
+  text-decoration: none;
+  border-bottom: 2px solid #adadad;
+  padding: 1px 0;
 }

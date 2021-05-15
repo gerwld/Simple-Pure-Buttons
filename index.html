@@ -7,14 +7,198 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="main-content">
+  <main class="page-main">
+    <h1 class="visually-hidden">Great Pure Buttons</h1>
+    <div class="main-content">
     <a href="#"><button class="btn button-1">Button 1</button></a>
     <a href="#"><button class="btn button-2">Button 2</button></a>
-    <a href="#"><button class="btn button-3">Button 3</button></a>
+    <a href="#"><button class="btn button-3"><span>Button 3</span></button></a>
     <a href="#"><button class="btn button-4">Button 4</button></a>
     <a href="#"><button class="btn button-5">Button 5</button></a>
     <a href="#"><button class="btn button-6">Button 6</button></a>
     <a href="#"><button class="btn button-7">Button 7</button></a>
+    <a href="#"><button class="btn button-8 transition">Button 7</button></a>
+    </div>
+    <div class="code-example">
+      <h2>HTML Code:</h2>
+      <code>
+        <span readonly class="textarea code-example__html" role="textbox" id="code-html"  contenteditable>
+          &lt;a href="#"&gt;&lt;button class="btn button-1"&gt;Button 1&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-2"&gt;Button 2&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-3"&gt;&lt;span&gt;Button 3&lt;/span&gt;&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-4"&gt;Button 4&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-5"&gt;Button 5&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-6"&gt;Button 6&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-7"&gt;Button 7&lt;/button&gt;&lt;/a&gt;<br>
+          &lt;a href="#"&gt;&lt;button class="btn button-8 transition"&gt;Button 7&lt;/button&gt;&lt;/a&gt;<br>
+         </span>
+        </code>
+
+        <h2>CSS Code:</h2>
+        <code>
+          <pre><span readonly class="textarea code-example__css" role="textbox" id="code-css" contenteditable>.btn {
+  min-width: 150px;
+  min-height: 50px;
+  cursor: pointer;
+  font-size: inherit;
+  transition: 300ms;
+}
+
+.button-1 {
+  background-color: hsl(0, 73%, 58%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0 #cdcdcd;
+  position: relative;
+}
+
+
+/* Button 1 fire. If you want to remove it - just simply delete rule down below */
+.button-1:active::before {
+   display: block;
+}
+
+.button-1::before {
+  content: " ";
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+
+  width: 270px;
+  height: 240px;
+  background-image: url(img/fire.gif);
+  background-repeat: no-repeat;
+  filter: hue-rotate(120deg);
+  z-index: -1;
+}
+/* End of fire rules */
+
+
+.button-1:hover {
+  background-color: hsl(0, 73%, 42%);
+  box-shadow: 0 10px 20px 0 #cdcdcd;
+}
+
+.button-2 {
+  background-color: transparent;
+  color: hsl(210deg, 73%, 58%);
+  border: 1px solid hsl(210deg, 73%, 58%);
+  border-radius: 6px;
+}
+
+.button-2:hover {
+  background-color: hsl(210deg 100% 84%);
+}
+
+.button-3 {
+  background-color: transparent;
+  color: #373737;
+  border: 1px solid #373737;
+  transition: background 200ms;
+}
+
+.button-3:hover {
+  color: #fff;
+  background-color: #373737;
+}
+
+.button-3:active {
+  transform: skewX(-15deg);
+}
+
+.button-3 span {
+  transition: 0;
+}
+
+.button-3:active span {
+  display: inline-block;
+  transform: skewX(15deg);
+}
+
+.button-4 {
+  background-color: transparent;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  border-radius: 100px;
+}
+
+.button-4:hover {
+  background-color: hsl(187deg 100% 42% / 7%);
+}
+
+.button-5 {
+  background-color: #673ab7;
+  color: #fff;
+  border: 1px solid #673ab7;
+  border-radius: 100px;
+}
+
+.button-5:hover {
+  color: #673ab7;
+  background-color: transparent;
+  border: 1px solid #673ab7;
+}
+
+.button-6 {
+  color: #fff;
+  background-color: #607d8b;
+  border: none;
+  border-radius: 0;
+}
+
+
+.button-6:hover {
+  box-shadow: 6px 6px 0 0 #9e9e9e;
+}
+
+.button-7 {
+  color: #fff;
+  background-image: linear-gradient(to right, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+  border: none;
+  border-radius: 5px;
+}
+
+.button-7:hover {
+  border-radius: 25px;
+}
+
+.button-8 {
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  background: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
+  background-size: 1px 200px;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+}
+
+.button-8:hover {
+  background-position: 100px;
+
+}
+
+.button-9 {
+  background-color: #673ab7;
+  color: #fff;
+  border: 1px solid #673ab7;
+  border-radius: 100px;
+}
+
+.button-9:hover {
+  color: #673ab7;
+  background-color: transparent;
+  border: 1px solid #673ab7;
+}
+           </span>
+           </pre>
+          </code>
+    </div>
   </main>
+  <script src="script.js"></script>
+  <footer class="main-footer">
+    <div class="copyright">Created by <a href="http://gerwld.github.io/" target="_blank">P. Jaworski</a> with ♥</div>
+  </footer>
 </body>
 </html>
