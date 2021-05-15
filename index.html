@@ -8,7 +8,7 @@
 </head>
 <body>
   <main class="page-main">
-    <h1 class="visually-hidden">Great Pure Buttons</h1>
+    <h1 class="page-main__title">Great Pure Buttons 🛠</h1>
     <div class="main-content">
     <a href="#"><button class="btn button-1" ontouchstart="">Button 1</button></a>
     <a href="#"><button class="btn button-2">Button 2</button></a>
@@ -18,21 +18,27 @@
     <a href="#"><button class="btn button-6">Button 6</button></a>
     <a href="#"><button class="btn button-7">Button 7</button></a>
     <a href="#"><button class="btn button-8">Button 8</button></a>
+    <!-- button 9 -->
+    <a href="#" class="btn-link">
+      <button class="btn button-9">
+        <span class="icon"></span><span>Button 9</span>
+      </button>
+    </a>
     </div>
     <div class="code-example">
       <h2>HTML Code:</h2>
-      <code>
-        <span readonly class="textarea code-example__html" role="textbox" id="code-html"  contenteditable>
-          &lt;a href="#"&gt;&lt;button class="btn button-1" ontouchstart=""&gt;Button 1&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-2"&gt;Button 2&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-3" ontouchstart=""&gt;&lt;span&gt;Button 3&lt;/span&gt;&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-4"&gt;Button 4&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-5"&gt;Button 5&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-6"&gt;Button 6&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-7"&gt;Button 7&lt;/button&gt;&lt;/a&gt;<br>
-          &lt;a href="#"&gt;&lt;button class="btn button-8"&gt;Button 8&lt;/button&gt;&lt;/a&gt;<br>
+      <code><pre>
+        <span readonly class="textarea code-example__html" role="textbox" id="code-html"  contenteditable>&lt;a href="#"&gt;&lt;button class="btn button-1" ontouchstart=""&gt;Button 1&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-2"&gt;Button 2&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-3" ontouchstart=""&gt;&lt;span&gt;Button 3&lt;/span&gt;&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-4"&gt;Button 4&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-5"&gt;Button 5&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-6"&gt;Button 6&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-7"&gt;Button 7&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#"&gt;&lt;button class="btn button-8"&gt;Button 8&lt;/button&gt;&lt;/a&gt;
+&lt;a href="#" class="btn-link"&gt;&lt;button class="btn button-9"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;span&gt;Button 9&lt;/span&gt;&lt;/button&gt;&lt;/a&gt;
          </span>
-        </code>
+        </pre></code>
 
         <h2>CSS Code:</h2>
         <code>
@@ -42,6 +48,7 @@
   min-height: 50px;
   cursor: pointer;
   font-size: inherit;
+  border: none;
   transition: 300ms;
   -moz-user-select:none;
   -webkit-user-select:none;
@@ -58,7 +65,6 @@
 
 .button-1:hover {
   background-color: hsl(0, 73%, 42%);
-  box-shadow: 0 5px 15px 5px #cdcdcd;
 }
 
 
@@ -98,7 +104,8 @@
 .button-3 {
   background-color: transparent;
   color: #373737;
-  border: 1px solid #373737;
+  border: 2px solid #373737;
+  font-weight: bold;
   transition: background 200ms;
 }
 
@@ -131,6 +138,10 @@
   background-color: hsl(187deg 100% 42% / 7%);
 }
 
+.button-4:focus {
+  transform: scale(0.90, 0.90);
+}
+
 .button-5 {
   background: linear-gradient( 100deg,  rgba(116,18,203,1) 11.2%, rgba(230,46,131,1) 91.2% );
   color: #fff;
@@ -142,6 +153,7 @@
 .button-5:hover {
   filter: brightness(1.2);
   background-position: -50px;
+  transform: scale(1.04, 1.04);
 }
 
 .button-6 {
@@ -152,12 +164,16 @@
 }
 
 .button-6:hover {
-  box-shadow: 6px 6px 0 0 #9e9e9e;
+  box-shadow: 6px 6px 0 0 #cecece;
+}
+
+.button-6:active {
+  box-shadow: 0 0 0 0 #cecece;
 }
 
 .button-7 {
   color: #fff;
-  background-image: linear-gradient(to right, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   border: none;
   border-radius: 5px;
 }
@@ -181,17 +197,46 @@
 
 }
 
+/* Button 9 styles */
 .button-9 {
-  background-color: #673ab7;
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(125deg, #20bf55 0%, #01baef 74%);
+  filter: brightness(1.2);
   color: #fff;
-  border: 1px solid #673ab7;
   border-radius: 100px;
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 25px 22px -14px #2fbcd1a8;
+  transition: 500ms;
 }
 
 .button-9:hover {
-  color: #673ab7;
-  background-color: transparent;
+  color: #fff;
+  border: none;
+  transform: scale(0.90, 0.90);
+  /* background-image: linear-gradient(145deg, #20bf55 0%, #01baef 74%); */
+  background-size: 250px 100px;
+  background-position: right;
+  box-shadow: 0px 15px 22px -15px #01baef75;
 }
+
+.button-9 span.icon {
+  background: url(img/icon.svg) no-repeat;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 20px;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+/* Button 9 styles end */
+
            </textarea>
            </pre>
           </code>
