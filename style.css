@@ -57,7 +57,7 @@ display: block;
  background-color: #fff;
  font-family: monospace;
  padding: 20px;
- border: none;
+ border: 1px solid #c3c3c3;
  font-size: inherit;
  border-radius: 10px;
 }
