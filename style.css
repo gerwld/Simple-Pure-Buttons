@@ -12,7 +12,7 @@ body {
   background-color: #e3e3e3;
 }
 
-*:not(.code-example) {
+* {
   -moz-user-select:none;
   -webkit-user-select:none;
 }
@@ -45,6 +45,8 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  -moz-user-select: all;
+  -webkit-user-select: all;
 }
 
 .code-example h2 {
