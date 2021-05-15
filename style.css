@@ -94,6 +94,7 @@ body {
   max-width: 725px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 80px;
   margin: 0 auto;
 }
 
@@ -341,3 +342,8 @@ display: block;
 }
 
 /* Button 9 styles end */
+
+
+pre {
+  font-size: 0;
+}
