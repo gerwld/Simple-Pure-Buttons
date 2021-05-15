@@ -37,6 +37,8 @@ body {
 .code-example {
   min-width: 550px;
   max-width: 725px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 
