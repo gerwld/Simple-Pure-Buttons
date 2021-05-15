@@ -12,11 +12,6 @@ body {
   background-color: #e3e3e3;
 }
 
-* {
-  -moz-user-select:none;
-  -webkit-user-select:none;
-}
-
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -45,8 +40,6 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  -moz-user-select: all;
-  -webkit-user-select: all;
 }
 
 .code-example h2 {
