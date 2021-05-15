@@ -72,6 +72,10 @@ display: block;
   transition: 300ms;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .button-1 {
   background-color: hsl(0, 73%, 58%);
   color: #fff;
