@@ -37,8 +37,7 @@ body {
   display: grid;
   -ms-grid-columns: 150px 50px 150px 50px 150px;
   grid-template-columns: repeat(3, 150px);
-  -ms-grid-rows: 50px 50px 50px 50px 50px;
-  grid-template-rows: repeat(3, 50px);
+  grid-template-rows: repeat(4, 50px);
   gap: 50px;
   align-items: center;
   justify-items: center;
@@ -245,6 +244,8 @@ display: block;
   background-color: #607d8b;
   border: none;
   border-radius: 0;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 
@@ -346,4 +347,120 @@ display: block;
 
 pre {
   font-size: 0;
+}
+.button-10 {
+  color: #ff9800;
+  background-image: linear-gradient(135deg, #ff9800 50%, white 50%);
+  background-size: 350px;
+  background-position: right;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
+  border: 1px solid #ff9800;
+  border-bottom: 3px solid #ff9800;
+}
+
+.button-10:hover {
+  color: #fff;
+  background-position: left;
+}
+
+
+.button-10:active {
+  transform: scale(0.95, 0.95);
+}
+/* Button 11 rules */
+.button-11 {
+  color: #3f51b5;
+  background-image: linear-gradient(135deg,white 40%,#8394f0 40%, #3f51b5 45%, #3f51b5 50%, white 50%);
+  background-size: 440px;
+  background-position: right;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
+  border: 1px solid #3f51b5;
+  border-bottom: 3px solid #3f51b5;
+  transition: 400ms ease-in-out;
+}
+
+.button-11:hover {
+  background-position: left;
+  transform: scale(1.05, 1.05);
+}
+
+
+.button-11:active {
+  transform: scale(0.95, 0.95);
+}
+
+/* Button 12 rules */
+.button-12 {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 170px;
+  min-height: 50px;
+
+  color: #000;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 100px;
+  position: relative;
+  transition: all 450ms cubic-bezier(0.65,0,.076,1);
+}
+
+.button-12 .text {
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: 23px;
+  z-index: 99999;
+}
+
+.button-12 .icon {
+position: absolute;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cdefs%3E%3CclipPath%3E%3Cpath fill='%2300f' fill-opacity='.514' d='m-7 1024.36h34v34h-34z'/%3E%3C/clipPath%3E%3CclipPath%3E%3Cpath fill='%23aade87' fill-opacity='.472' d='m-6 1028.36h32v32h-32z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath d='m345.44 248.29l-194.29 194.28c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744l171.91-171.91-171.91-171.9c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.29 194.28c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373' transform='matrix(.03541-.00013.00013.03541 2.98 3.02)' fill='%23fff'/%3E%3C/svg%3E");
+width: 50px;
+height: 50px;
+background-color: #282936;
+background-repeat: no-repeat;
+background-size: 23px 22px;
+background-position: 16px 14px;
+display: block;
+border-radius: 100px;
+transition: all 450ms cubic-bezier(0.65,0,.076,1);
+}
+
+.button-12:hover {
+    color: #fff;
+}
+
+.button-12:hover .icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cdefs%3E%3CclipPath%3E%3Cpath fill='%2300f' fill-opacity='.514' d='m-7 1024.36h34v34h-34z'/%3E%3C/clipPath%3E%3CclipPath%3E%3Cpath fill='%23aade87' fill-opacity='.472' d='m-6 1028.36h32v32h-32z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath d='m345.44 248.29l-194.29 194.28c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744l171.91-171.91-171.91-171.9c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.29 194.28c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373' transform='matrix(.03541-.00013.00013.03541 2.98 3.02)' fill='%23fff'/%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  background-position: 29px 14px;
+  width: 100%;
+}
+
+.button-12::before {
+content: "";
+background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='3px' viewBox='0 0 16 3' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ELine%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cline x1='14.5669757' y1='1.99050209' x2='1.56697572' y2='1.99050209' id='Line' stroke='none' stroke-width='2'%3E%3C/line%3E%3C/g%3E%3C/svg%3E");
+z-index: 9999;
+width: 1px;
+height: 3px;
+margin-left: 28px;
+margin-bottom: 2px;
+transition: all 450ms cubic-bezier(0.65,0,.046,1);
+}
+
+.button-12:hover::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='3px' viewBox='0 0 16 3' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ELine%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cline x1='14.5669757' y1='1.99050209' x2='1.56697572' y2='1.99050209' id='Line' stroke='%23FFFFFF' stroke-width='2'%3E%3C/line%3E%3C/g%3E%3C/svg%3E");
+  width: 16px;
+  margin-left: 27px;
+}
+
+.button-12:active{
+  transform: scale(0.98, 0.98);
+  transition: all 50ms cubic-bezier(0.65,0,.046,1);
 }
