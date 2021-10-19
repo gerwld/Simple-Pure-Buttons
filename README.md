@@ -1,4 +1,4 @@
 # Simple Pure CSS Buttons
-Some great buttons with hover &amp; transition effects. Made it for improve my skills in pure CSS
+Some great buttons with hover &amp; transition effects.
 
 https://gerwld.github.io/Simple-Pure-Buttons/
